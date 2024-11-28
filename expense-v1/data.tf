@@ -9,6 +9,6 @@ data "aws_security_group" "sg" {
   name= "launch-wizard-1"
 }
 
-resource "aws_route53_zone" "zone" {
+data "aws_route53_zone" "zone" {
   name = "techadda.co"
 }
