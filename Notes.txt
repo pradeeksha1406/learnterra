@@ -1,0 +1,8 @@
+resource{}
+data{}
+variables{}
+output{}
+local{}
+provider{}
+module{}
+provisioner{}
