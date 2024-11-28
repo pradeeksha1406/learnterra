@@ -10,7 +10,7 @@ resource "aws_instance" "frontend" {
 
 resource "aws_route53_record" "frontend" {
   zone_id = data.aws_route53_zone.zone.id
-  name    = "frontend"
+  name    = "frontend.techadda.co"
   type    = "A"
   ttl     = 300
   records = [aws_instance.frontend.private_ip]
@@ -28,7 +28,7 @@ resource "aws_instance" "backend" {
 
 resource "aws_route53_record" "backend" {
   zone_id = data.aws_route53_zone.zone.id
-  name    = "backend"
+  name    = "backend.techadda.co"
   type    = "A"
   ttl     = 300
   records = [aws_instance.backend.private_ip]
@@ -46,7 +46,7 @@ resource "aws_instance" "mysql" {
 
 resource "aws_route53_record" "mysql" {
   zone_id = data.aws_route53_zone.zone.id
-  name    = "mysql"
+  name    = "mysql.techadda.co"
   type    = "A"
   ttl     = 300
   records = [aws_instance.mysql.private_ip]
