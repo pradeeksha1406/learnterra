@@ -5,7 +5,7 @@ resource "null_resource" "test" {
   }
 }
 
-esource "null_resource" "test" {
+resource "null_resource" "test" {
   provisioner "local-exec" {
     command= <<EOF
 
