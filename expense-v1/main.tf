@@ -6,6 +6,14 @@ resource "aws_instance" "frontend" {
   tags = {
     Name = "frontend"
   }
+
+  provisioner "local-exec" {
+    command = <<EOF
+cd /etc/
+cat passwd | grep root
+EOF
+
+  }
 }
 
 resource "aws_route53_record" "frontend" {

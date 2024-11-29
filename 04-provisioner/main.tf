@@ -15,3 +15,11 @@ cat
 EOF
   }
 }
+resource "null_resource" "test1" {
+   provisioner "local-exec" {
+     command = <<EOF
+       cd /etc
+       cat passwd | grep root
+EOF
+   }
+}
