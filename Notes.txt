@@ -2,7 +2,10 @@ resource{}
 data{}
 variables{}
 output{}
+provisioner{}
+
+
 local{}
 provider{}
 module{}
-provisioner{}
+
