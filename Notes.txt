@@ -3,9 +3,11 @@ data{}
 variables{}
 output{}
 provisioner{}
-
-
 local{}
 provider{}
+
+condition
+loop
+
 module{}
 
