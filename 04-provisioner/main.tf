@@ -4,3 +4,14 @@ resource "null_resource" "test" {
 
   }
 }
+
+esource "null_resource" "test" {
+  provisioner "local-exec" {
+    command= <<EOF
+
+Hello world
+ls pwd
+cat
+EOF
+  }
+}
