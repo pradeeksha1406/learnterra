@@ -1,8 +1,6 @@
-resource "null_resource" "mysql" {
+resource "null_resource" "test" {
   provisioner "local-exec" {
-    command = <<EOF
-       cd /etc
-       cat passwd | grep root
-EOF
+    command = "echo Hello word"
+
   }
 }
