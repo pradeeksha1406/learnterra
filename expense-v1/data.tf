@@ -18,3 +18,10 @@ variable "zone_id" {
   default = "techadda.co"
 
 }
+
+locals {
+
+  ami = data.aws_ami.ami.id
+  zone_id = data.aws_route53_zone.zone.id
+
+}

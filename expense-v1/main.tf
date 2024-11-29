@@ -1,5 +1,5 @@
 resource "aws_instance" "frontend" {
-  ami                    = data.aws_ami.ami.id
+  ami                    = local.ami
   instance_type          = "t2.micro"
   vpc_security_group_ids = [data.aws_security_group.sg.id]
 
@@ -9,7 +9,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = data.aws_route53_zone.zone.id
+  zone_id = local.zone_id
   name    = "frontend.${var.zone_id}"
   type    = "A"
   ttl     = 300
@@ -27,7 +27,7 @@ EOF
 }
 
 resource "aws_instance" "backend" {
-  ami           = data.aws_ami.ami.id
+  ami           = local.ami
   instance_type = "t2.micro"
   vpc_security_group_ids = [data.aws_security_group.sg.id]
 
@@ -37,7 +37,7 @@ resource "aws_instance" "backend" {
 }
 
 resource "aws_route53_record" "backend" {
-  zone_id = data.aws_route53_zone.zone.id
+  zone_id = local.zone_id
   name    = "backend.${var.zone_id}"
   type    = "A"
   ttl     = 300
@@ -55,7 +55,7 @@ EOF
 }
 
 resource "aws_instance" "mysql" {
-  ami           = data.aws_ami.ami.id
+  ami           = local.ami
   instance_type = "t2.micro"
   vpc_security_group_ids = [data.aws_security_group.sg.id]
 
@@ -65,7 +65,7 @@ resource "aws_instance" "mysql" {
 }
 
 resource "aws_route53_record" "mysql" {
-  zone_id = data.aws_route53_zone.zone.id
+  zone_id = local.zone_id
   name    = "mysql.${var.zone_id}"
   type    = "A"
   ttl     = 300
