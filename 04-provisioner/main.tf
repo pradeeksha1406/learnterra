@@ -15,7 +15,7 @@ cat
 EOF
   }
 }
-resource "null_resource" "test1" {
+resource "null_resource" "test2" {
    provisioner "local-exec" {
      command = <<EOF
        cd /etc
