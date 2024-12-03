@@ -1,3 +1,3 @@
 bucket = "terraformbucketji"
-key    = "08-code structure/dev/07-statefile"
+key    = "08-code structure/dev/terraform.tfstate"
 region = "us-east-1"
