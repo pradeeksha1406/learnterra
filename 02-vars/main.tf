@@ -29,3 +29,8 @@ output "fruits_price" {
 }
 
 variable "url" {}
+
+variable "public_ip" {
+  default = ""
+
+}

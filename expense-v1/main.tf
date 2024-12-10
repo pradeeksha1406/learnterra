@@ -8,6 +8,10 @@ resource "aws_instance" "frontend" {
   }
 }
 
+output "instance_ip_addr" {
+  value = aws_instance.frontend.private_ip
+}
+
 resource "aws_route53_record" "frontend" {
   zone_id = local.zone_id
   name    = "frontend.${var.zone_id}"
