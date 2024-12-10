@@ -4,10 +4,6 @@ resource "null_resource" "test" {
   }
 }
 
-variable "env" {}
 
 
-terraform {
-  backend "s3" {
-  }
-}
+
